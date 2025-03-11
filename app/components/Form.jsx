@@ -3,7 +3,7 @@ import {useState} from "react";
 function Form(props){
 
     const [name, setName] = useState("");
-    const [url, setURL] = useState("");
+    const [URL, setURL] = useState("");
 
     function handleClick(){
         props.submitFavLink({name, URL});

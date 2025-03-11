@@ -1,28 +1,28 @@
 "use client";
-import {useState} from 'react';
+import { useState } from 'react';
 
 import Form from "./components/form";
 import Table from "./components/Table";
 
-function Homepage(){
+function Homepage() {
 
     const [favLinks, setFavLinks] = useState([]);
-    function HandleNewFavLink(favlink){
-        console.log(favlink, "in HomePage");
-        let newFavLink = [...favLinks, favlink];
-        setNewFavLink(favlink);
+    function handleNewFavLink(favLink) {
+        console.log(favLink, "in HomePage");
+        let newFavLinks = [...favLinks, favLink];
+        setFavLinks(newFavLinks);
     }
 
-    const [count, setCount] = useState(4);
     return (
         <div>
             <h1>FavLinks</h1>
 
-            <Form submitFavLink={HandleNewFavLink}/>
+            <Form submitFavLink={handleNewFavLink} />
 
-            <Table data={favLinks}/>
+            <Table data={favLinks} />
 
         </div>
-    )
+    );
 }
+
 export default Homepage;
