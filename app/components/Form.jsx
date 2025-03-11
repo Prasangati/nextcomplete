@@ -15,7 +15,6 @@ function Form(props){
 
     }
 
-
     function handleURLInputChange(e){
         console.log(e.target.value);
         setURL(e.target.value);
